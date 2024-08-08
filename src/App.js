@@ -1,6 +1,7 @@
-
-
+import './App.css'
+import { useState } from 'react';
 function App() {
+  const [toDos,setToDos] = useState([])
   return (
     <div className="app">
     <div className="mainHeading">
