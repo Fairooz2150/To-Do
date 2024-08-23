@@ -9,7 +9,7 @@ function App() {
   const [weekday, setWeekday] = useState('');
 
   useEffect(() => {
-    const today = new Date(); 
+    const today = new Date();
     const options = { weekday: 'long', month: 'long', day: 'numeric' };
     setDate(today.toLocaleDateString('en-US', options));
 
@@ -23,7 +23,7 @@ function App() {
       setToDos([...toDos, newToDo]);
       setToDo('');  // Clear input field after adding
     }
-  };
+  }
 
   const handleCheckToDo = (id) => {
     const updatedToDos = toDos.map((obj) => {
@@ -52,31 +52,31 @@ function App() {
       </div>
 
       <div className="subHeading">
-        <br/>
+        <br />
         <h2>Whoop, it's {weekday} 🌝 ☕</h2>
       </div>
 
       <div className="input ">
-        <input 
-          value={toDo} 
-          onChange={(e) => setToDo(e.target.value)} 
-          type="text" 
-          placeholder="✎ Add item..." 
+        <input
+          value={toDo}
+          onChange={(e) => setToDo(e.target.value)}
+          type="text"
+          placeholder="✎ Add item..."
         />
         <i onClick={handleAddToDo} className="fas fa-plus"></i>
       </div>
 
       <div className="container  todo-columns">
-        
+
         <div className="todos  col-md-5">
           <h3>Pending Tasks</h3>
           {toDos.filter(todo => !todo.status).map((obj) => (
             <div className="todo" key={obj.id}>
               <div className="left">
-                <input 
+                <input
                   type="checkbox"
                   checked={obj.status}
-                  onChange={() => handleCheckToDo(obj.id)} 
+                  onChange={() => handleCheckToDo(obj.id)}
                 />
                 <p>{obj.text}</p>
               </div>
@@ -93,10 +93,10 @@ function App() {
           {completedToDos.map((obj) => (
             <div className="todo" key={obj.id}>
               <div className="left">
-                <input 
+                <input
                   type="checkbox"
                   checked={obj.status}
-                  onChange={() => handleCheckToDo(obj.id)} 
+                  onChange={() => handleCheckToDo(obj.id)}
                 />
                 <p>{obj.text}</p>
               </div>
@@ -107,11 +107,9 @@ function App() {
             </div>
           ))}
         </div>
-        </div> 
-      
-      
+      </div>
     </div>
-  );
+  )
 }
 
 export default App;

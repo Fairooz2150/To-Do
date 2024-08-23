@@ -64,7 +64,7 @@ h2 {
   background: #f8f9fa;
   padding: 5px;
   border-radius: 5px;
-  width:45% /* Adjust width to fit two columns */
+  width:40rem /* Adjust width to fit two columns */
 }
 
 .app .todos h3 {

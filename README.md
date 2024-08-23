@@ -1,6 +1,3 @@
-Here’s a description you can use for your To-Do app on GitHub:
-
----
 
 # To-Do Application
 
@@ -51,6 +48,3 @@ Once the app is running, you can:
 
 Feel free to contribute to the project by submitting issues, feature requests, or pull requests.
 
----
-
-Feel free to adjust the description to better fit your app’s specific features and technologies!
